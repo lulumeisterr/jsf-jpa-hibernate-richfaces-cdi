@@ -1,0 +1,15 @@
+<!-- 
+
+Permitindo a CDI se registrar na lista de servicos que precisa ser
+inicializado pelo container; ou seja no tomcat a JNDI(Java Naming and Directory Interface) esta somente como leitura
+
+JNDI - Ela permite que aplicações cliente descubram e obtenham dados ou objetos através de um nome.
+
+ -->
+ 
+<Context>  
+  <Resource name="BeanManager" 
+   auth="Container" 
+   type="javax.enterprise.inject.spi.BeanManager" 
+   factory="org.jboss.weld.resources.ManagerObjectFactory"/>  
+</Context>

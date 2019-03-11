@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+<h:head>
+
+	<title>Cadastro Pessoal</title>
+
+	<meta name="description" content="JSF , RichFaces e Boostrap" />
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+	<meta name="author" content="Lucas Rodrigues" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="estilo.css"></h:outputStylesheet>
+
+</h:head>
+
+<h:body>
+		<h:form styleClass="form-group">
+			<fieldset>
+				<legend>Informacoes de Cadastro</legend>
+					<rich:panel header="Cadastro">
+						<h:panelGrid columns="4" width="90%">
+						
+							<h:outputLabel for="nome">Nome : </h:outputLabel>
+							<h:inputText styleClass="form-control" id="nome" value="#{cadastroBean.nome}"/>
+							
+							<h:outputLabel for="rg">RG : </h:outputLabel>
+							<h:inputText id="rg" value="#{cadastroBean.rg}"/>
+
+							<h:outputLabel for="cpf">CPF : </h:outputLabel>
+							<h:inputText id="cpf" value="#{cadastroBean.cpf}"/>
+									
+							<h:outputLabel for="end">Endereco : </h:outputLabel>
+							<h:inputText id="end" value="#{cadastroBean.endereco}" />
+	
+							<h:outputLabel for="num">Numero : </h:outputLabel>
+							<h:inputText id="num" value="#{cadastroBean.numeroCasa}" />
+	
+							<h:outputLabel for="cel">Cel : </h:outputLabel>
+							<h:inputText id="cel" value="#{cadastroBean.celular}" />
+	
+							<h:outputLabel for="tel">Tel : </h:outputLabel>
+							<h:inputText id="tel" value="#{cadastroBean.telefone}" />
+	
+							<h:outputLabel for="cep">CEP</h:outputLabel>
+							<h:inputText id="cep" value="#{cadastroBean.cep}" />
+						
+						</h:panelGrid>
+					</rich:panel>
+			</fieldset>
+		</h:form>
+
+
+	<h:outputScript library="js" name="bootstrap.js" />
+	<h:outputScript library="js" name="bootstrap.min.js" />
+
+</h:body>
+
+</html>
